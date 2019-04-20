@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "459195464822",
+    "firebase_url": "https://hydroponicapp-7216f.firebaseio.com",
+    "project_id": "hydroponicapp-7216f",
+    "storage_bucket": "hydroponicapp-7216f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459195464822:android:d0521ad3e5028142",
+        "android_client_info": {
+          "package_name": "com.example.tahmid.hydroponicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459195464822-omr08gm5jlnoe1nlafpadssebgfako5i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tahmid.hydroponicapp",
+            "certificate_hash": "392af5f2c4bd1d892aca86f0644f53894b2a6474"
+          }
+        },
+        {
+          "client_id": "459195464822-28i8lmvhsa4qoorm7edm51715f4roprm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-2KGj0rc01OTTItpQFynEvBhEwC-XPx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459195464822-28i8lmvhsa4qoorm7edm51715f4roprm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
