@@ -1,6 +1,7 @@
 package com.example.tahmid.hydroponicapp;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -115,6 +116,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             Toast.makeText(RegistrationActivity.this, "Authentication Successful",
                                     Toast.LENGTH_SHORT).show();
+
+                            Intent intent=new Intent(getApplicationContext(),DashBoard.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(RegistrationActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Intent success=new Intent(getApplicationContext(),MenuActivity.class);
+                            Intent success=new Intent(getApplicationContext(),DashBoard.class);
                             success.putExtra("mail",email);
                             startActivity(success);
                             Toast.makeText(MainActivity.this, "Login Successful",
