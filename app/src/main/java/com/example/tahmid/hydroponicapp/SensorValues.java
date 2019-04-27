@@ -3,6 +3,7 @@ package com.example.tahmid.hydroponicapp;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,11 +18,19 @@ public class SensorValues extends AppCompatActivity {
 
     private DatabaseReference databaseReference;
     private FirebaseUser user;
+    private TextView humtv,lighttv,phtv,temptv,wleveltv,wtemptv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor_values);
+
+        humtv=findViewById(R.id.humId);
+        lighttv=findViewById(R.id.lightId);
+        phtv=findViewById(R.id.phId);
+        temptv=findViewById(R.id.tempId);
+        wleveltv=findViewById(R.id.wlevelId);
+        wtemptv=findViewById(R.id.wtempId);
 
         user=FirebaseAuth.getInstance().getCurrentUser();
         databaseReference=FirebaseDatabase.getInstance().getReference("Users/"+user.getUid()+"/"+"Values");
@@ -36,8 +45,15 @@ public class SensorValues extends AppCompatActivity {
                     String wlevel=dataSnapshot.child("wlevel").getValue().toString();
                     String wtemp=dataSnapshot.child("wtemp").getValue().toString();
 
+                    humtv.setText(hum);
+                    lighttv.setText(light);
+                    phtv.setText(ph);
+                    temptv.setText(temp);
+                    wleveltv.setText(wlevel);
+                    wtemptv.setText(wtemp);
+
                     Toast.makeText(getApplicationContext(), "Data fetched", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(),hum+" "+light+" "+ph+" "+temp+" "+wlevel+" "+wtemp,Toast.LENGTH_LONG).show();
+                   //  Toast.makeText(getApplicationContext(),hum+" "+light+" "+ph+" "+temp+" "+wlevel+" "+wtemp,Toast.LENGTH_LONG).show();
             }
 
             @Override
