@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:gauge="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".AnimatedReadings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:orientation="vertical"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#FFFF00"
+                android:layout_gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ambient Temperature"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <com.example.tahmid.hydroponicapp.Thermometer
+                        android:id="@+id/Athermometer"
+                        android:layout_width="130dp"
+                        android:layout_height="180dp"
+                        app:innerColor="@color/colorPrimary"
+                        app:middleColor="@color/colorPrimaryDark"
+                        app:outerColor="@color/colorAccent"
+                        android:layout_gravity="center"
+                        app:radius="20dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/aTempTid"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="30.6"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#1dde13"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water  Temperature"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <com.example.tahmid.hydroponicapp.Thermometer
+                        android:id="@+id/Wthermometer"
+                        android:layout_width="130dp"
+                        android:layout_height="180dp"
+                        app:innerColor="@color/colorPrimary"
+                        app:middleColor="@color/colorPrimaryDark"
+                        app:outerColor="@color/colorAccent"
+                        android:layout_gravity="center"
+                        app:radius="20dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/wTempId"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30.6"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#738c6f"
+                android:layout_gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <de.nitri.gauge.Gauge
+                        android:id="@+id/gauge"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        gauge:initialValue="22"
+                        gauge:maxValue="100"
+                        gauge:minValue="0"
+                        gauge:totalNicks="120"
+                        gauge:valuePerNick="1"
+                        android:layout_marginLeft="7dp"
+                        android:foregroundGravity="center_horizontal"/>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/hId"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#75168b"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water Level"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <me.itangqi.waveloadingview.WaveLoadingView
+                        android:id="@+id/wlv"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        app:wlv_borderColor="@color/colorAccent"
+                        android:layout_marginRight="7dp"
+                        app:wlv_borderWidth="3dp"
+                        app:wlv_shapeType="circle"
+                        app:wlv_round_rectangle="true"
+                        app:wlv_triangle_direction="north"
+
+                        app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+                        app:wlv_titleCenterStrokeWidth="3dp"
+                        app:wlv_titleCenterColor="@android:color/white"
+                        app:wlv_titleCenterSize="24sp"
+
+                        app:wlv_titleTopStrokeColor="@android:color/holo_blue_dark"
+                        app:wlv_titleTopStrokeWidth="3dp"
+                        app:wlv_titleTopColor="@android:color/white"
+                        app:wlv_titleTopSize="24sp"
+
+                        app:wlv_titleBottomStrokeColor="@android:color/holo_blue_dark"
+                        app:wlv_titleBottomStrokeWidth="3dp"
+                        app:wlv_titleBottomColor="@android:color/white"
+                        app:wlv_titleBottomSize="24sp"
+
+                        app:wlv_waveAmplitude="20"
+                        app:wlv_waveColor="#00FFFF"
+                        />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/wLevel"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30.6"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#ded3e2"
+                android:layout_gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pH value"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                   <ImageView
+                       android:layout_width="150dp"
+                       android:layout_height="200dp"
+                       android:src="@drawable/phmeter"
+                       android:layout_marginLeft="10dp"/>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ph"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FFFF00"
+                app:cardBackgroundColor="#9f9e90"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Light"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/bulb" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_margin="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/lId"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30.6"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#c71812"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+
+
+
+</ScrollView>

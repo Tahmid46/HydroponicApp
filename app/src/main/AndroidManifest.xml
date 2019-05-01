@@ -16,9 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".DashBoard" />
-        <activity android:name=".SensorValues"></activity>
+        <activity android:name=".RegistrationActivity"
+            android:label="Registration"/>
+
+        <activity android:name=".DashBoard"
+            android:label="DashBoard"/>
+
+        <activity android:name=".SensorValues"
+            android:label="Reading"/>
+        <activity android:name=".AnimatedReadings"
+            android:label="Readings"/>
+        <activity android:name=".StatActivity"
+            android:label="Statistics"/>
+
+        <activity android:name=".pHStatActivity"
+            android:label="pH Stats"/>
+
     </application>
 
 </manifest>

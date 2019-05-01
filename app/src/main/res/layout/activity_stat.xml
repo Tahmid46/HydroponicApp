@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".StatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/phStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="pH Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#FFC0CB"/>
+
+        <Button
+            android:id="@+id/AirTempStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Air Temp Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#c0e7ff"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/WaterTempStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Water Temp Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#c0c6ff"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/lightStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Light Intesity Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#219ee7"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/humStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Humidity Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#80b6d1"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/WaterLevelStatId"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Water Level Stats"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:background="#da1dde"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

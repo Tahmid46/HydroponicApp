@@ -7,51 +7,56 @@
     android:orientation="vertical"
     tools:context=".DashBoard"
     android:padding="10dp"
-    android:gravity="center"
     android:id="@+id/ll">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+ <Button
+     android:layout_marginTop="20dp"
+     android:id="@+id/readId"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:background="#FFFF00"
+     android:text="Sensor Reading"
+     android:textAllCaps="false"
+     android:textColor="#191970"
+     android:textSize="20dp"
+     android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/measures"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="#00FF00"
-            android:clickable="true"
-            android:padding="5dp"
-            android:foreground="?android:attr/selectableItemBackground">
+ <Button
+     android:layout_marginTop="20dp"
+     android:id="@+id/statId"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:background="#00c4ff"
+     android:text="Statistics"
+     android:textAllCaps="false"
+     android:textColor="#191970"
+     android:textSize="20dp"
+     android:textStyle="bold" />
 
+ <Button
+     android:layout_marginTop="20dp"
+     android:id="@+id/plantId"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:background="#00ff1e"
+     android:text="Types of Plants"
+     android:textAllCaps="false"
+     android:textColor="#191970"
+     android:textSize="20dp"
+     android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                >
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="62dp"
-
-                    android:padding="10dp"
-                    android:src="@drawable/measurements"
-                     />
-
-
-            </LinearLayout>
-
-
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>
+ <Button
+     android:layout_marginTop="20dp"
+     android:id="@+id/helplineId"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:background="#ff5e00"
+     android:text="Help Line"
+     android:textAllCaps="false"
+     android:textColor="#191970"
+     android:textSize="20dp"
+     android:textStyle="bold" />
 
 
 </LinearLayout>
