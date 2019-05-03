@@ -73,7 +73,7 @@ public class pHStatActivity extends AppCompatActivity {
 
                 try {
 
-
+                                    //
 
                     float ph5=(float) sd.get(0).getPh();
                     float ph1=(float) sd.get(1).getPh();
