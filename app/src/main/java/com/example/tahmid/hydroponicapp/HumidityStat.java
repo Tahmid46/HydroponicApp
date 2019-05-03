@@ -66,7 +66,7 @@ public class HumidityStat extends AppCompatActivity {
 
                 try {
 
-                    //
+                    /////
 
                     float ph5=(float) sd.get(0).getHum();
                     float ph1=(float) sd.get(1).getHum();
