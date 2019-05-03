@@ -43,13 +43,17 @@ public class DashBoard extends AppCompatActivity {
             }
         });
 
-        statBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),StatActivity.class);
-                startActivity(intent);
-            }
-        });
+       try{
+           statBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(getApplicationContext(),StatActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }catch (Exception e){
+           Toast.makeText(getApplicationContext(),e.getMessage().toString(),Toast.LENGTH_LONG).show();
+       }
 
     }
 }

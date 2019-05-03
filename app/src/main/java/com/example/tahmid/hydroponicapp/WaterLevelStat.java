@@ -9,7 +9,6 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,28 +20,26 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-
-public class pHStatActivity extends AppCompatActivity {
+public class WaterLevelStat extends AppCompatActivity {
 
     private DatabaseReference databaseReference1;
 
     private FirebaseUser user;
 
 
-    private ArrayList<SensorData>sd=new ArrayList<>();
+    private ArrayList<SensorData> sd=new ArrayList<>();
 
 
     private BarChart chart;
     private ArrayList<BarEntry> NoOfEmp = new ArrayList<BarEntry>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p_hstat);
+        setContentView(R.layout.activity_water_level_stat);
 
-
-
-        chart = findViewById(R.id.barchart);
+        chart = findViewById(R.id.barchart4);
         chart.getDescription().setEnabled(false);
 
         user=FirebaseAuth.getInstance().getCurrentUser();
@@ -70,13 +67,13 @@ public class pHStatActivity extends AppCompatActivity {
 
                 try {
 
-                                    //
+                    //
 
-                    float ph5=(float) sd.get(0).getPh();
-                    float ph1=(float) sd.get(1).getPh();
-                    float ph4=(float) sd.get(2).getPh();
-                    float ph2=(float) sd.get(3).getPh();
-                    float ph3=(float) sd.get(4).getPh();
+                    float ph5=(float) sd.get(0).getWlevel();
+                    float ph1=(float) sd.get(1).getWlevel();
+                    float ph4=(float) sd.get(2).getWlevel();
+                    float ph2=(float) sd.get(3).getWlevel();
+                    float ph3=(float) sd.get(4).getWlevel();
 
                     ArrayList<BarEntry> yVals=new ArrayList<>();
 
@@ -109,39 +106,5 @@ public class pHStatActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
-
-
-
-    void createBarChartpH()
-    {
-        ArrayList<BarEntry> NoOfEmp = new ArrayList<BarEntry>();
-
-        NoOfEmp.add(new BarEntry(6.2f, 0));
-        NoOfEmp.add(new BarEntry(6.7f, 1));
-        NoOfEmp.add(new BarEntry(6.8f, 2));
-        NoOfEmp.add(new BarEntry(7.0f, 3));
-        NoOfEmp.add(new BarEntry(6.4f, 4));
-
-
-        ArrayList<String> year = new ArrayList<String>();
-
-        year.add("First");
-        year.add("Second");
-        year.add("Third");
-        year.add("Fourth");
-        year.add("Fifth");
-
-        BarDataSet bardataset = new BarDataSet(NoOfEmp, "No Of Employee");
-        chart.animateY(5000);
-       // BarData data = new BarData(year, bardataset);
-        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
-       // chart.setData(data);
-    }
-
-
-
 }
