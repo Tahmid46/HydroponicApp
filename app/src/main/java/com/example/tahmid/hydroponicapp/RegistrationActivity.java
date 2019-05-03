@@ -106,7 +106,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            SensorData s1=new SensorData("0","0","0","0");
+                            SensorData s1=new SensorData(0.0,0.0,0.0,0.0,0.0,0.0);
 
                             Users r1=new Users(email,name,passWord);
                             FirebaseUser user = ath.getCurrentUser();

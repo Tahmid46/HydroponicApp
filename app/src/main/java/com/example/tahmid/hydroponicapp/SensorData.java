@@ -1,32 +1,68 @@
 package com.example.tahmid.hydroponicapp;
 
 public class SensorData {
-    String ph,ec,temp,light;
+    double hum,light,ph,temp,wlevel,wtemp;
 
-    public SensorData(String ph, String ec, String temp, String light) {
-        this.ph = ph;
-        this.ec = ec;
-        this.temp = temp;
-        this.light = light;
+    public SensorData(double hum,double light,double ph,double temp,double wlevel,double wtemp) {
+       this.hum=hum;
+       this.light=light;
+       this.ph=ph;
+       this.temp=temp;
+       this.wlevel=wlevel;
+       this.wtemp=wtemp;
+
     }
 
     public SensorData() {
     }
 
-    public String getPh() {
+
+    public double getHum() {
+        return hum;
+    }
+
+    public void setHum(double hum) {
+        this.hum = hum;
+    }
+
+    public double getLight() {
+        return light;
+    }
+
+    public void setLight(double light) {
+        this.light = light;
+    }
+
+    public double getPh() {
         return ph;
     }
 
-    public String getEc() {
-        return ec;
+    public void setPh(double ph) {
+        this.ph = ph;
     }
 
-    public String getTemp() {
+    public double getTemp() {
         return temp;
     }
 
-    public String getLight() {
-        return light;
+    public void setTemp(double temp) {
+        this.temp = temp;
+    }
+
+    public double getWlevel() {
+        return wlevel;
+    }
+
+    public void setWlevel(double wlevel) {
+        this.wlevel = wlevel;
+    }
+
+    public double getWtemp() {
+        return wtemp;
+    }
+
+    public void setWtemp(double wtemp) {
+        this.wtemp = wtemp;
     }
 }
 
