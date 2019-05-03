@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".PlantListAcitivity">
+
+    <SearchView
+        android:id="@+id/searchViewId"
+        android:queryHint="Search a plant name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/button_round">
+
+    </SearchView>
+
+    <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#22ff73"
+        android:dividerHeight="4dp"
+        android:listSelector="@color/colorAccent"
+        >
+
+    </ListView>
+
+</LinearLayout>

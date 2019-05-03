@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">HydroponicApp</string>
+
+    <string-array name="plant_names">
+        <item>Flowers</item>
+        <item>Herbs</item>
+        <item>Anise</item>
+        <item>Cannabis</item>
+        <item>Lettuce</item>
+        <item>Tomato</item>
+        <item>Peppers</item>
+        <item>Strawberries</item>
+        <item>Spinach</item>
+        <item>Cucumber</item>
+        <item>Cauliflower</item>
+        <item>Cabbage</item>
+    </string-array>
 </resources>

@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DashBoard extends AppCompatActivity {
 
 
-    private Button readings,statBtn;
+    private Button readings,statBtn,plantBtn,supBtn;
     private DatabaseReference databaseReference;
     private FirebaseUser user;
 
@@ -27,6 +27,8 @@ public class DashBoard extends AppCompatActivity {
 
         readings=findViewById(R.id.readId);
         statBtn=findViewById(R.id.statId);
+        plantBtn=findViewById(R.id.plantId);
+        supBtn=findViewById(R.id.helplineId);
 
         databaseReference=FirebaseDatabase.getInstance().getReference("Users");
         user=FirebaseAuth.getInstance().getCurrentUser();
@@ -54,6 +56,30 @@ public class DashBoard extends AppCompatActivity {
         }catch (Exception e){
            Toast.makeText(getApplicationContext(),e.getMessage().toString(),Toast.LENGTH_LONG).show();
        }
+
+        try{
+            plantBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(getApplicationContext(),PlantListAcitivity.class);
+                    startActivity(intent);
+                }
+            });
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),e.getMessage().toString(),Toast.LENGTH_LONG).show();
+        }
+
+        try{
+            supBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(getApplicationContext(),SupportActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),e.getMessage().toString(),Toast.LENGTH_LONG).show();
+        }
 
     }
 }

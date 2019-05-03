@@ -33,12 +33,22 @@
             android:label="Statistics" />
         <activity
             android:name=".pHStatActivity"
-            android:label="pH Stats" />
-        <activity android:name=".AirTempStat" />
-        <activity android:name=".WaterTempStat" />
-        <activity android:name=".LightIntensityStat" />
-        <activity android:name=".HumidityStat" />
-        <activity android:name=".WaterLevelStat"></activity>
+            android:label="pH Statistics" />
+        <activity android:name=".AirTempStat"
+            android:label="Air Temperature Statistics"/>
+        <activity android:name=".WaterTempStat"
+            android:label="Water Temperature Statistics"/>
+        <activity android:name=".LightIntensityStat"
+            android:label="Light Intensity Stattistics"/>
+        <activity android:name=".HumidityStat"
+            android:label="Humidity Statistics"/>
+        <activity android:name=".WaterLevelStat"
+            android:label="Water Level Statistics"/>
+        <activity android:name=".PlantListAcitivity"
+            android:label="Plants you can cultivate"/>
+        <activity android:name=".SupportActivity"
+            android:label="Support"/>
+
     </application>
 
 </manifest>
