@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,20 +35,34 @@
         <activity
             android:name=".pHStatActivity"
             android:label="pH Statistics" />
-        <activity android:name=".AirTempStat"
-            android:label="Air Temperature Statistics"/>
-        <activity android:name=".WaterTempStat"
-            android:label="Water Temperature Statistics"/>
-        <activity android:name=".LightIntensityStat"
-            android:label="Light Intensity Stattistics"/>
-        <activity android:name=".HumidityStat"
-            android:label="Humidity Statistics"/>
-        <activity android:name=".WaterLevelStat"
-            android:label="Water Level Statistics"/>
-        <activity android:name=".PlantListAcitivity"
-            android:label="Plants you can cultivate"/>
-        <activity android:name=".SupportActivity"
-            android:label="Support"/>
+        <activity
+            android:name=".AirTempStat"
+            android:label="Air Temperature Statistics" />
+        <activity
+            android:name=".WaterTempStat"
+            android:label="Water Temperature Statistics" />
+        <activity
+            android:name=".LightIntensityStat"
+            android:label="Light Intensity Stattistics" />
+        <activity
+            android:name=".HumidityStat"
+            android:label="Humidity Statistics" />
+        <activity
+            android:name=".WaterLevelStat"
+            android:label="Water Level Statistics" />
+        <activity
+            android:name=".PlantListAcitivity"
+            android:label="Plants you can cultivate" />
+        <activity
+            android:name=".SupportActivity"
+            android:label="Support" />
+        <activity
+            android:name=".NutrientStatActivity"
+            android:label="Nutrients Statistics" />
+
+        <activity android:name=".MainActivity"
+           />
+
 
     </application>
 

@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,RegistrationActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 
             }
         });
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                                Intent success=new Intent(getApplicationContext(),DashBoard.class);
                                success.putExtra("mail",email);
                                startActivity(success);
+                               overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                                Toast.makeText(MainActivity.this, "Login Successful",
                                        Toast.LENGTH_SHORT).show();
                            } else {
@@ -94,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
        }
 
 
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
 
     }
 }

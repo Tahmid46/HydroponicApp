@@ -60,7 +60,7 @@
                         android:id="@+id/Athermometer"
                         android:layout_width="130dp"
                         android:layout_height="180dp"
-                        app:innerColor="@color/colorPrimary"
+                        app:innerColor="#ff22"
                         app:middleColor="@color/colorPrimaryDark"
                         app:outerColor="@color/colorAccent"
                         android:layout_gravity="center"
@@ -68,8 +68,9 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView
@@ -125,7 +126,7 @@
                         android:id="@+id/Wthermometer"
                         android:layout_width="130dp"
                         android:layout_height="180dp"
-                        app:innerColor="@color/colorPrimary"
+                        app:innerColor="#ff22"
                         app:middleColor="@color/colorPrimaryDark"
                         app:outerColor="@color/colorAccent"
                         android:layout_gravity="center"
@@ -133,15 +134,16 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView
                         android:id="@+id/wTempId"
                         android:layout_marginLeft="5dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:text="30.6"
                         android:textSize="25dp"
                         android:textStyle="bold"
@@ -212,8 +214,9 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView
@@ -298,8 +301,9 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView
@@ -370,8 +374,9 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView
@@ -432,8 +437,9 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="5dp"
                         android:layout_margin="0dp"
+                        android:background="#2238ff"
                         />
 
                     <TextView

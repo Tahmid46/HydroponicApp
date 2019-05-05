@@ -15,6 +15,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
+import java.util.Random;
+
 import de.nitri.gauge.Gauge;
 import me.itangqi.waveloadingview.WaveLoadingView;
 
@@ -26,6 +29,8 @@ public class AnimatedReadings extends AppCompatActivity {
     private Thermometer amb_thermometer,w_thermometer;
     private float temperature;
     private Gauge gauge;
+   // public int flag=0;
+   // private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     private WaveLoadingView waveLoadingView;
 
@@ -60,16 +65,39 @@ public class AnimatedReadings extends AppCompatActivity {
                 String wlevel=dataSnapshot.child("wlevel").getValue().toString();
                 String wtemp=dataSnapshot.child("wtemp").getValue().toString();
 
-                humtv.setText(hum);
+                Random random=new Random();
+
+                double ran=Math.random();
+
+                if(ran<0.5){
+                    double h=(Double.parseDouble(hum)+ran)-40.0;
+                    humtv.setText(String.format("%.2f",h)+"%");
+                    gauge.moveToValue((float)h);
+                    //hum=Double.toString(h);
+                }
+                else{
+                    double h=(Double.parseDouble(hum)-ran)-40.0;
+                    humtv.setText(String.format("%.2f",h)+"%");
+                    gauge.moveToValue((float)h);
+                    //hum=Double.toString(h);
+                }
+
+
                 lighttv.setText(light);
-                phtv.setText(ph);
-                temptv.setText(temp);
-                wleveltv.setText(wlevel);
-                wtemptv.setText(wtemp);
+                phtv.setText(String.format("%.2f",Float.parseFloat(ph)));
+                temptv.setText(temp+"\u00b0"+"C");
+                wtemptv.setText(wtemp+"\u00b0"+"C");
+
+                if(Integer.parseInt(wlevel)<300){
+                    wleveltv.setText("Not Optimal");
+                }
+                else{
+                    wleveltv.setText("Optimal Level");
+                }
 
                 amb_thermometer.setCurrentTemp(Float.parseFloat(temp));
                 w_thermometer.setCurrentTemp(Float.parseFloat(wtemp));
-                gauge.moveToValue(Float.parseFloat(hum));
+               // gauge.moveToValue(Float.parseFloat(hum));
 
                 if(Float.parseFloat(wlevel)<50){
                     waveLoadingView.setBottomTitle(String.format("%d%%",Integer.parseInt(wlevel)));
@@ -99,6 +127,13 @@ public class AnimatedReadings extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
 
     }
 }

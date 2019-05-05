@@ -14,6 +14,7 @@ public class StatActivity extends AppCompatActivity {
     private Button lightStat;
     private Button humStat;
     private Button wlevelstat;
+    private Button nutStat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class StatActivity extends AppCompatActivity {
         lightStat=findViewById(R.id.lightStatId);
         humStat=findViewById(R.id.humStatId);
         wlevelstat=findViewById(R.id.WaterLevelStatId);
+        nutStat=findViewById(R.id.nutrientStatId);
 
         phStat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +77,23 @@ public class StatActivity extends AppCompatActivity {
             }
         });
 
+        nutStat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),NutrientStatActivity.class);
+                startActivity(intent);
+            }
+        });
+
         /////
 
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
 
     }
 }

@@ -42,6 +42,7 @@ public class DashBoard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),AnimatedReadings.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
 
@@ -51,6 +52,7 @@ public class DashBoard extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent=new Intent(getApplicationContext(),StatActivity.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
             });
         }catch (Exception e){
@@ -63,6 +65,7 @@ public class DashBoard extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent=new Intent(getApplicationContext(),PlantListAcitivity.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
             });
         }catch (Exception e){
@@ -75,11 +78,19 @@ public class DashBoard extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent=new Intent(getApplicationContext(),SupportActivity.class);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
             });
         }catch (Exception e){
             Toast.makeText(getApplicationContext(),e.getMessage().toString(),Toast.LENGTH_LONG).show();
         }
+
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
 
     }
 }
