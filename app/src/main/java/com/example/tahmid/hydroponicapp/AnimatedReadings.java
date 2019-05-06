@@ -92,29 +92,33 @@ public class AnimatedReadings extends AppCompatActivity {
                     wleveltv.setText("Not Optimal");
                 }
                 else{
-                    wleveltv.setText("Optimal Level");
+                    wleveltv.setText("Optimal");
                 }
 
                 amb_thermometer.setCurrentTemp(Float.parseFloat(temp));
                 w_thermometer.setCurrentTemp(Float.parseFloat(wtemp));
                // gauge.moveToValue(Float.parseFloat(hum));
 
-                if(Float.parseFloat(wlevel)<50){
+                if(Float.parseFloat(wlevel)<100){
                     waveLoadingView.setBottomTitle(String.format("%d%%",Integer.parseInt(wlevel)));
                     waveLoadingView.setCenterTitle("");
                     waveLoadingView.setTopTitle("");
+                    //waveLoadingView.setProgressValue(Integer.parseInt(wlevel));
                 }
 
-                if(Float.parseFloat(wlevel)<80){
+                if(Float.parseFloat(wlevel)<250){
                     waveLoadingView.setBottomTitle("");
                     waveLoadingView.setCenterTitle(String.format("%d%%",Integer.parseInt(wlevel)));
                     waveLoadingView.setTopTitle("");
+                    //waveLoadingView.setProgressValue(Integer.parseInt(wlevel));
                 }
 
                 else{
                     waveLoadingView.setBottomTitle("");
                     waveLoadingView.setCenterTitle("");
                     waveLoadingView.setTopTitle(String.format("%d%%",Integer.parseInt(wlevel)));
+                    //waveLoadingView.setProgressValue(Integer.parseInt(wlevel));
+                    //waveLoadingView.setProgressValue(200);
                 }
 
                 Toast.makeText(getApplicationContext(), "Data fetched", Toast.LENGTH_SHORT).show();
