@@ -23,7 +23,8 @@
             android:text="pH Stats"
             android:textAllCaps="false"
             android:textSize="20dp"
-            android:background="#FFC0CB"/>
+            android:background="#FFC0CB"
+            android:drawableTop="@drawable/ic_ph_meter"/>
 
         <Button
             android:id="@+id/AirTempStatId"
@@ -33,7 +34,8 @@
             android:textAllCaps="false"
             android:textSize="20dp"
             android:background="#c0e7ff"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_hot_1"/>
 
         <Button
             android:id="@+id/WaterTempStatId"
@@ -43,7 +45,8 @@
             android:textAllCaps="false"
             android:textSize="20dp"
             android:background="#c0c6ff"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_hot"/>
 
         <Button
             android:id="@+id/lightStatId"
@@ -52,8 +55,9 @@
             android:text="Light Intesity Stats"
             android:textAllCaps="false"
             android:textSize="20dp"
-            android:background="#219ee7"
-            android:layout_marginTop="20dp"/>
+            android:background="#da7bbc"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_idea"/>
 
         <Button
             android:id="@+id/humStatId"
@@ -63,7 +67,8 @@
             android:textAllCaps="false"
             android:textSize="20dp"
             android:background="#80b6d1"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_humidity"/>
 
         <Button
             android:id="@+id/WaterLevelStatId"
@@ -73,7 +78,8 @@
             android:textAllCaps="false"
             android:textSize="20dp"
             android:background="#da1dde"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/sea_level"/>
 
 
         <Button
@@ -84,7 +90,8 @@
             android:textAllCaps="false"
             android:textSize="20dp"
             android:background="#1dde2a"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_fertilizer"/>
 
 
     </LinearLayout>
