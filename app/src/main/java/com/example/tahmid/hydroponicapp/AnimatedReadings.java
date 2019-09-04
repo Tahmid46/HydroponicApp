@@ -95,7 +95,7 @@ public class AnimatedReadings extends AppCompatActivity {
                     wleveltv.setText("Optimal");
                 }
 
-                amb_thermometer.setCurrentTemp(Float.parseFloat(temp));
+                amb_thermometer. setCurrentTemp(Float.parseFloat(temp));
                 w_thermometer.setCurrentTemp(Float.parseFloat(wtemp));
                // gauge.moveToValue(Float.parseFloat(hum));
 
